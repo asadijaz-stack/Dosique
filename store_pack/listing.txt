@@ -1,0 +1,108 @@
+DOSIQUE — GOOGLE PLAY STORE LISTING (ready to paste)
+Package: com.dosique.app · Version 1.0.0 · Price: Free · Contains ads: NO · In-app purchases: NONE
+====================================================================
+
+APP NAME (22 / 30 characters)
+--------------------------------------------------------------------
+Dosique: Pill Reminder
+
+SHORT DESCRIPTION (73 / 80 characters)
+--------------------------------------------------------------------
+Medication reminders that respect your routine. Free, no ads, no account.
+
+FULL DESCRIPTION (2665 / 4000 characters)
+--------------------------------------------------------------------
+Never miss a dose again — and never pay a subscription to be reminded.
+
+Dosique is a calm, private medication reminder for you and the people you care for. Add your medicines once, and Dosique reminds you at the right time, keeps a clear record of every dose, and warns you before you run out. It is completely free: no ads, no paywall, no account, no subscription — every feature is unlocked from the start.
+
+REMINDERS THAT RESPECT YOUR ROUTINE
+• On-time reminders with your choice of 5 gentle tones
+• Snooze for 10, 20 or 30 minutes when a dose catches you busy
+• Mark Taken, or Skip with a reason, in one tap
+• Separate profiles for you, family members and pets — unlimited medicines for everyone
+
+EVERY SCHEDULE TYPE
+• Every day, at one or more times
+• Specific weekdays
+• Every X days
+• Every X hours within a time window
+• As needed (PRN) — no reminder, just a quick log when you take it
+• Courses with a fixed length, like a 7-day antibiotic course, with Day X of Y progress that stops by itself
+
+HISTORY YOU CAN FIX
+• A month calendar that shows how each day went
+• Made a mistake? Edit any past dose — mark it taken, change the time it was taken, or clear the mark
+• Streaks, plus adherence for this week, the last 30 days, and each medicine
+
+STOCK & REFILLS
+• Dosique counts your tablets, capsules, ml, drops or puffs as you take them
+• Low-stock warnings before you run out, plus a weekly refill summary on a day you choose
+• Expiry-date alerts 30 days ahead — and a clear flag once a medicine has expired
+
+FOR FAMILY & DOCTORS
+• Share today's schedule or a missed-dose summary by WhatsApp, SMS or any app — you choose exactly what to send; there is no live tracking and no shared account
+• A tidy doctor report (PDF) with your medicine list, 30-day adherence and dose history for a date range you pick
+• Appointment reminders for doctor and pharmacy visits
+
+PRIVATE BY DESIGN
+• No account, no sign-up, no analytics, no ads — the app does not even ask for internet access
+• Everything — medicines, dose history, photos you add, backups — stays on your phone
+• Data only leaves your device when you choose to share or export it yourself
+• Optional large-text senior mode, dark theme, and a photo for each medicine if you want one
+• Full JSON backup and restore, so your data moves with you to a new phone
+
+IMPORTANT
+Dosique is a reminder and recording tool only. It is not a medical device, does not provide medical advice, and does not check drug interactions. Always follow your prescriber's instructions, and talk to your doctor or pharmacist about your medicines.
+
+Questions or feedback? Email [YOUR EMAIL]. If Dosique helps you, a review means a lot.
+
+WHAT'S NEW — v1.0.0 release notes (485 / 500 characters)
+--------------------------------------------------------------------
+Welcome to Dosique 1.0.0!
+
+• Unlimited medicines and profiles — free, no ads, no account
+• Every schedule type: daily, weekdays, every X days, every X hours, as-needed (PRN), and fixed-length courses
+• On-time reminders with snooze 10/20/30 min, Taken / Skip in one tap
+• History calendar — fix any past dose, streaks and adherence
+• Stock counting with low-stock and expiry alerts
+• Doctor report (PDF) and family sharing by WhatsApp or SMS
+
+Everything stays on your phone. Thank you!
+
+CATEGORY & TAGS
+--------------------------------------------------------------------
+Category (recommended): Health & Fitness
+Why: Dosique is a consumer reminder and record-keeping tool, not a
+clinical service. Health & Fitness is where medication-reminder apps
+live and it avoids implying medical diagnosis or treatment, which the
+Medical category can suggest. (If you prefer Medical, the listing copy
+already makes the "reminder tool, not medical advice" position clear.)
+
+Tags: In Play Console, tags are picked from Google's preset list (there
+are no free-text tags). Choose the closest available ones around
+health / medication reminders / personal health records, and confirm
+the exact options in the console — the preset list changes over time.
+
+TARGET AUDIENCE NOTE
+--------------------------------------------------------------------
+Adults who manage daily medication for themselves or for family
+members (including elderly parents), and pet owners with pet
+medication schedules. Content rating expectation: Everyone (see
+play_console_checklist.txt). Recommended target-age setting in the
+console: 18 and over as the primary audience, with the app also usable
+by younger teens managing their own medication — see the checklist for
+the exact recommendation and reasoning.
+
+DEVELOPER CONTACT (set in Play Console > Store settings)
+--------------------------------------------------------------------
+Contact email: [YOUR EMAIL] — the same email you put in the privacy
+policy. This email is shown publicly on the listing.
+Website: optional — the public privacy-policy URL can be used.
+
+FEATURE GRAPHIC / ICON / SCREENSHOTS
+--------------------------------------------------------------------
+Use icon_512.png, feature_graphic.png and the 7 images in
+screenshots/ from this pack. The screenshots are drawn mockups that
+match the real app (see README.txt) — replace them with real phone
+captures before publishing if you prefer.

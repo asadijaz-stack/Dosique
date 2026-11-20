@@ -1,0 +1,105 @@
+DOSIQUE — PLAY CONSOLE "DATA SAFETY" ANSWERS (ready to enter)
+App: Dosique · Package: com.dosique.app
+====================================================================
+
+HEADLINE ANSWERS
+--------------------------------------------------------------------
+Data collected:  NONE
+Data shared:     NONE
+
+In the Play Console Data safety form, answer:
+- "Does your app collect or share any of the required user data types?"
+  -> NO
+That single "No" is the truthful answer for Dosique, because of how the
+app is built (see WHY, below). The console will then show the listing
+badge "No data collected" and "No data shared".
+
+WHY EVERY COMMON DATA TYPE IS "NOT COLLECTED"
+--------------------------------------------------------------------
+Play's definition of "collected" means data that is transmitted off the
+device to the developer or a third party. Dosique transmits nothing:
+
+- The app does not request the INTERNET permission. It has no server,
+  no account system, no analytics SDK, no ads SDK, and no crash
+  reporting. Code-wise it cannot send data out.
+- Health info (medicines, dose history): entered by the user, stored
+  only in the app's private on-device storage. Never transmitted.
+  -> Health data: NOT collected, NOT shared.
+- Personal info (profile names for self/family/pets, prescriber or
+  pharmacy names the user types): on-device only. -> NOT collected.
+- Photos (medicine photos the user picks): chosen through the Android
+  system photo picker, copied into private on-device app storage.
+  -> NOT collected, NOT shared.
+- App activity / interactions: no analytics of any kind. -> NOT
+  collected.
+- Device or other IDs: the app reads and sends none. -> NOT collected.
+- Location, contacts, calendar, audio, messages: the app does not
+  access these at all (SMS/WhatsApp "sending" is done by handing text
+  to the user's own messaging app through the Android share sheet —
+  Dosique itself does not read or send messages). -> NOT collected.
+
+User-initiated sharing is not "collection" or "sharing" in Play's
+sense: when the user shares a schedule summary, a doctor-report PDF,
+or a backup file, they pick the destination app themselves. That data
+goes from the user's hand to the user's chosen app — the developer is
+never a recipient.
+
+SECURITY PRACTICES (console questions)
+--------------------------------------------------------------------
+- "Is all of the user data collected by your app encrypted in transit?"
+  -> Not applicable in substance: no data is transmitted at all.
+  In the console, this question only applies if you declare collected
+  data; with "No data collected" it is skipped / answered accordingly.
+- "Do you provide a way for users to request that their data is
+  deleted?"
+  -> Users control deletion directly: any entry can be deleted in the
+  app, and clearing app storage or uninstalling deletes everything.
+  There is no server copy, so no request to the developer is needed.
+  If the console asks for a data deletion URL/mechanism, point to the
+  privacy policy (Section 5, "Deleting your data") at its public URL:
+  [PRIVACY POLICY URL]
+
+PERMISSIONS -> DECLARATION MAPPING
+--------------------------------------------------------------------
+POST_NOTIFICATIONS ......... Dose, refill and appointment reminders.
+SCHEDULE_EXACT_ALARM /
+USE_EXACT_ALARM ............ Reminders fire at the exact set time
+                             (alarm-clock style). See the exact-alarm
+                             note in play_console_checklist.txt — the
+                             console may ask you to complete the
+                             exact alarm / health declaration.
+RECEIVE_BOOT_COMPLETED ..... Restores reminders after a reboot.
+VIBRATE .................... Reminder vibration + optional haptics.
+System photo picker ........ No storage permission; one user-chosen
+                             photo at a time (medicine photo).
+System file picker / share . Backup export/import and user-initiated
+sheet                        sharing only. No broad file access.
+
+NOT requested: INTERNET, location, contacts, camera, microphone,
+health sensors, READ/WRITE external storage.
+
+HEALTH DECLARATION (Play Console "Health content and services" /
+health apps declaration)
+--------------------------------------------------------------------
+Google Play requires apps in the Health & Fitness / Medical area to
+complete a health declaration. For Dosique, the truthful position is:
+
+- Dosique is a medication REMINDER and RECORD-KEEPING tool.
+- It does NOT provide medical advice, diagnosis, treatment
+  recommendations, dosage calculation, or drug-interaction checking.
+- It is NOT a medical device and does not connect to any medical
+  hardware or health platform (no Health Connect integration).
+- All health-related information in the app is entered by the user and
+  stays on the user's device.
+
+So, in the declaration form: select the options that describe an app
+which helps users track/record health information they enter
+themselves and set reminders, and do NOT select anything claiming
+diagnosis, treatment, disease management advice, interaction
+checking, or medical-device functions. The exact wording and checkbox
+labels of this form change from time to time — CONFIRM IN CONSOLE:
+read each statement before ticking it, and only agree to statements
+that match the paragraph above. If the form asks whether the app
+provides health content/services "for medical purposes", answer in
+line with the disclaimer in the listing and privacy policy: reminder
+and recording tool only.

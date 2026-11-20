@@ -1,0 +1,9 @@
+# Dosique release signing — copy this file to key.properties IN THIS SAME
+# FOLDER (android/app/key.properties) and fill in the two passwords you chose
+# when you created dosique_release.jks with keytool (see BUILD_ON_YOUR_PC.md).
+# The .jks lives in the PROJECT ROOT (D:\App\dosique\dosique_release.jks),
+# so from android/app the path is ../../dosique_release.jks
+storePassword=PUT_YOUR_KEYSTORE_PASSWORD_HERE
+keyPassword=PUT_YOUR_KEY_PASSWORD_HERE
+keyAlias=dosique
+storeFile=../../dosique_release.jks

@@ -1,0 +1,155 @@
+DOSIQUE — PLAY CONSOLE CHECKLIST (step by step, for this app)
+App: Dosique · Package: com.dosique.app · Version 1.0.0 · Free, no ads, no IAP
+====================================================================
+
+BEFORE YOU START — things only YOU can do (do these first)
+--------------------------------------------------------------------
+[ ] Put your real contact email in privacy_policy.md (replace
+    [YOUR EMAIL], in two places) and set the [DATE].
+[ ] Host privacy_policy.md at a PUBLIC URL (GitHub Pages works well:
+    publish it as an .html or rendered markdown page). Keep the URL —
+    you will paste it into Play Console twice (store listing contact /
+    App content > Privacy policy). Replace [PRIVACY POLICY URL] in
+    data_safety.txt notes if you keep a copy.
+[ ] Build and install the release APK on YOUR phone first and test the
+    core loop: add a medicine, get a real reminder, mark Taken, check
+    History, set a refill, generate the doctor PDF. If reminders seem
+    late on your phone, exclude Dosique from battery optimisation in
+    phone Settings and re-test. Do this BEFORE publishing — reminders
+    are the whole product.
+[ ] (Optional but recommended) Replace the mockup screenshots in this
+    pack with real captures from your phone. The mockups match the
+    real UI, colours and labels, and are fine to submit, but real
+    captures are always the most honest option. Keep the same order.
+[ ] Have dosique_release.jks + android/app/key.properties ready (your
+    own key, created on your PC — see the app project's
+    BUILD_ON_YOUR_PC.md). You cannot update the app later without
+    this key file. Back it up somewhere safe.
+
+1) CREATE THE APP IN PLAY CONSOLE
+--------------------------------------------------------------------
+[ ] Play Console > Create app:
+    - App name: Dosique: Pill Reminder (same as listing.txt)
+    - Default language: English (United States) — or your preferred
+      primary language
+    - App or game: App
+    - Free or paid: FREE (this cannot be changed later — Dosique is
+      fully free, no IAP)
+    - Accept the declarations.
+[ ] In "Set up your app" tasks, work through the steps below.
+
+2) BUILD + UPLOAD THE AAB
+--------------------------------------------------------------------
+[ ] On your PC, in D:\App\dosique (the project folder):
+        flutter pub get
+        flutter build appbundle --release
+    Output: build\app\outputs\bundle\release\app-release.aab
+    Signing: dosique_release.jks (project root), alias "dosique",
+    passwords from android/app/key.properties (copied from
+    key.properties.TEMPLATE). Details: BUILD_ON_YOUR_PC.md in the
+    project.
+[ ] Play Console > Release > Production (or start with Testing >
+    Closed testing — see step 9) > Create new release > upload
+    app-release.aab.
+[ ] Release name: 1.0.0 is fine (auto-filled from the AAB).
+[ ] Release notes: paste WHAT'S NEW from listing.txt.
+
+3) STORE LISTING (Grow > Store presence > Main store listing)
+--------------------------------------------------------------------
+[ ] App name, short description, full description: paste from
+    listing.txt (counts already verified within Play's limits).
+[ ] App icon: upload icon_512.png from this pack (512x512). It is a
+    faithful resize of the app's own launcher icon source
+    (assets/icon/icon.png) — store icon and in-app icon match.
+[ ] Feature graphic: upload feature_graphic.png (1024x500).
+[ ] Phone screenshots: upload the 7 files in screenshots/ in order
+    (01 Today, 02 Medicines, 03 Add medicine, 04 Reminder,
+    05 History, 06 Stock & refills, 07 Doctor report). 1080x1920.
+[ ] Category: Health & Fitness (see listing.txt for why).
+[ ] Tags: pick the closest preset tags (health / medication /
+    personal records) — confirm exact options in the console.
+[ ] Contact details: your contact email [YOUR EMAIL]; website can be
+    the privacy-policy URL.
+[ ] "What's new" is set per-release (step 2), not here.
+
+4) PRIVACY POLICY (App content > Privacy policy)
+--------------------------------------------------------------------
+[ ] Paste your public privacy-policy URL: [PRIVACY POLICY URL]
+
+5) DATA SAFETY (App content > Data safety)
+--------------------------------------------------------------------
+[ ] Answer "No" to collecting/sharing user data, and follow
+    data_safety.txt in this pack line by line. Expected result on the
+    listing: "No data collected" / "No data shared".
+
+6) HEALTH DECLARATION (App content > Health content and services /
+   health apps declaration)
+--------------------------------------------------------------------
+[ ] Declare Dosique as a medication reminder / record-keeping tool:
+    user-entered information, reminders, no diagnosis, no treatment,
+    no interaction checking, not a medical device. Follow the guidance
+    block in data_safety.txt and CONFIRM each statement in the console
+    before ticking — the form wording changes occasionally.
+[ ] Exact alarms: if the console shows a permissions declaration for
+    SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM, state the core purpose:
+    "Medication reminders must fire at the exact time the user set —
+    this is the app's core feature (alarm-clock style reminders)."
+    Dosique also holds USE_EXACT_ALARM, which is intended exactly for
+    alarm/reminder apps; answer any form consistently with that.
+
+7) CONTENT RATING (App content > Content ratings)
+--------------------------------------------------------------------
+[ ] Start the questionnaire, category: "Utility, Productivity,
+    Communication, or Other" (a health reference/reminder tool fits
+    the utility/other style questionnaire).
+[ ] Answer honestly: no violence, no sexual content, no profanity, no
+    gambling, no user-to-user communication inside the app, no ads,
+    no location sharing. The app displays medication information the
+    USER entered; it does not provide medical reference content or
+    advice.
+[ ] Expected result: Everyone (IARC). If any answer surprises you,
+    re-read the question — do not guess.
+
+8) TARGET AUDIENCE, ADS, APP ACCESS, NEWS
+--------------------------------------------------------------------
+[ ] Target audience: select 18 and over as the primary target group.
+    Justification: medication schedules are managed by adults for
+    themselves or family members; the app is not designed for or
+    marketed to children. (13+ would also be defensible, but 18+
+    keeps the declaration simple and matches the real user.)
+    - "Could your app appeal to children?" -> No.
+[ ] Ads declaration (App content > Ads): "Does your app contain
+    ads?" -> NO. Dosique contains no ads and no ad SDKs.
+[ ] App access (App content > App access): "All features available
+    without special access" — there is no login, no account, and no
+    restricted area. Reviewers can use every feature immediately.
+[ ] News apps declaration: not a news app -> No.
+[ ] Government apps / financial features / COVID declarations: not
+    applicable -> answer No where asked.
+[ ] Foreground service / special permissions declarations: only if
+    the console prompts; Dosique uses notifications + exact alarms
+    (covered in step 6), no foreground service declaration is expected.
+
+9) RELEASE STRATEGY
+--------------------------------------------------------------------
+[ ] Recommended: run a Closed testing release first (add your own
+    email as tester, install via the Play link, live with it for a
+    few days of real doses). This catches OEM reminder issues that no
+    sandbox test can.
+[ ] Then Production > Create release (step 2), countries: All
+    countries (the app is free, offline, English-only for now).
+[ ] Rollout: start at a staged percentage if you want caution, or
+    100% — for a free offline utility, full rollout after a clean
+    closed test is normal.
+
+10) FINAL PRE-PUBLISH SWEEP
+--------------------------------------------------------------------
+[ ] Listing preview looks right: icon, feature graphic, screenshots
+    in order, no placeholder text anywhere ([YOUR EMAIL] and
+    [PRIVACY POLICY URL] replaced everywhere they were needed).
+[ ] Privacy policy URL opens in a private/incognito browser window.
+[ ] Data safety shows "No data collected / No data shared".
+[ ] AAB version is 1.0.0 (versionCode 1) and signed with YOUR upload
+    key (Play Console shows the upload certificate after upload).
+[ ] You have a backup of dosique_release.jks and its passwords,
+    stored separately from the project folder.

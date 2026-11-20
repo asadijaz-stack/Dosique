@@ -1,0 +1,70 @@
+name: dosique
+description: "Dosique - a calm, private medication reminder. Unlimited medicines, no account, no ads, no paywall. Everything stays on your phone."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State
+  provider: ^6.1.5
+
+  # Local storage (offline-first, no account, no server)
+  shared_preferences: ^2.5.3
+  path_provider: ^2.1.5
+
+  # Reminders
+  flutter_local_notifications: ^22.3.3
+  timezone: ^0.11.2
+  flutter_timezone: ^5.0.2
+
+  # Photos, files, sharing
+  image_picker: ^1.2.1
+  share_plus: ^13.3.1
+  url_launcher: ^6.3.2
+  file_picker: ^13.4.0
+
+  # Doctor report PDF
+  pdf: ^3.11.3
+
+  # Reminder tone previews
+  audioplayers: ^6.5.1
+
+  # UI polish / animation
+  flutter_animate: ^4.5.2
+  confetti: ^0.8.0
+  intl: ^0.20.2
+  alarm: ^4.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/icon.png
+    - assets/sounds/tone_soft.wav
+    - assets/sounds/tone_bell.wav
+    - assets/sounds/tone_chime.wav
+    - assets/sounds/tone_pulse.wav
+    - assets/sounds/tone_calm.wav
+    - assets/sounds/tone_alarm.wav
+    - assets/sounds/tone_beacon.wav
+    - assets/sounds/tone_bigbell.wav
+
+# Launcher icons: regenerate with `dart run flutter_launcher_icons`
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "#0B8F7E"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
