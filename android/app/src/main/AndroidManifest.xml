@@ -1,10 +1,22 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- Dosique permissions: medication reminders + boot restore -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Play policy: USE_EXACT_ALARM is reserved for alarm-clock/calendar
+         apps and USE_FULL_SCREEN_INTENT needs a declaration — a medication
+         reminder is neither, so strip both even though the `alarm` plugin's
+         own manifest declares them. Exact alarms still work through
+         SCHEDULE_EXACT_ALARM, which the user grants once in onboarding
+         (Settings > Alarms & reminders). The alarm still rings forcefully;
+         on Android 14+ the ring screen opens when the user taps the alarm
+         notification instead of auto-popping full-screen. -->
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"
+        tools:node="remove" />
 
     <application
         android:label="Dosique"
